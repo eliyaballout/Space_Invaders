@@ -99,12 +99,12 @@
 /* #################################################################################################################################### */
 /* #################################################### Welcome Page ################################################################## */
 
-/* body{
+body{
     background-repeat: no-repeat;
     margin: 0;
     background-image: url("/resources/images/background1.jpg");
     background-size: auto;
-} */
+}
 
 
 #WelcomeMsg{
@@ -253,7 +253,7 @@ footer a:hover{
 }
   
 
-.submit {
+#submit {
     position: relative;
     display: inline-block;
     background-color: #000000;
@@ -517,14 +517,7 @@ label.error {
 }
 
 
-#myShip1 {
-    cursor: pointer;
-    border-radius: 10%;
-    background: red;
-}
-
-
-#myShip2, #myShip3{
+#myShip1, #myShip2, #myShip3{
     cursor: pointer;
     border-radius: 10%;
     background: #b2b3a1;
@@ -533,11 +526,6 @@ label.error {
 
 #myShip1:hover, #myShip2:hover, #myShip3:hover{
     background: #823ee9 !important;
-}
-
-
-input[type=checkbox] {
-    transform: scale(2);
 }
 
 

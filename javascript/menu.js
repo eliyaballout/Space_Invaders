@@ -1,4 +1,3 @@
-// import { setupGame } from "/javascript/game/game.js";
 /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
 function openNav() {
   document.getElementById("mySidebar").style.width = "180px";
@@ -29,9 +28,6 @@ function welcomePage(){
   clearRegPage();
   closeNav();
 
-  $("#game").hide();
-  stopGame();
-
 }
 
 function registerPage(){
@@ -45,10 +41,6 @@ function registerPage(){
   $("#settingsPage").hide();
   $("#footer").hide();
   closeNav();
-
-  $("#game").hide();
-  stopGame();
-
 }
 
 
@@ -63,10 +55,6 @@ function loginPage(){
   $("#settingsPage").hide();
   $("#footer").hide();
   closeNav();
-
-  $("#game").hide();
-  stopGame();
-
 }
 
 
@@ -157,29 +145,5 @@ function goToSettingsPage(){
   $("#settingsPage").show();
   clearLogPage();
   clearRegPage();
-
-  $("#game").hide();
-  stopGame();
-}
-
-function gamePage(){
-  clearLogPage();
-  clearRegPage();
-  $("#WelcomePage").hide();
-  $("#RegisterPage").hide();
-  $("#LoginPage").hide();
-  $("#aboutPage").hide();
-  $("#contactPage").hide();
-  $("#settingsPage").hide();
-  $("#footer").hide();
-  closeNav();
-  
-  $("#game").show();
-  stopGame();
-  startGame();
-}
-
-function startGame(){
-  setupGame();
 }
 
