@@ -1,0 +1,545 @@
+/* #################################################################################################################################### */
+/* #################################################### SideBar Menu ################################################################## */
+
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.sidebar a:hover {
+    background: #b02aea;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #2a34ea,
+                0 0 25px #b02aea,
+                0 0 50px #b02aea,
+                0 0 100px #b02aea;
+}
+
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+
+.sidebar b {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar .closebtn:hover, 
+.sidebar .closebtn:focus {
+        color: #ff0000;
+        text-decoration: none;
+        cursor: pointer;
+}
+
+
+.openbtn {
+    top: 0;
+    margin: 0;
+    height: 200px;
+    text-align: left;
+    position: fixed;
+    font-size: 30px;
+    cursor: pointer;
+    background-color:transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.openbtn:hover, 
+.openbtn:focus {
+    color: #ff0000;
+        text-decoration: none;
+        cursor: pointer;
+}
+
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+}
+
+
+/* #################################################################################################################################### */
+/* #################################################### Welcome Page ################################################################## */
+
+/* body{
+    background-repeat: no-repeat;
+    margin: 0;
+    background-image: url("/resources/images/background1.jpg");
+    background-size: auto;
+} */
+
+
+#WelcomeMsg{
+    margin-top: 60px; 
+    margin-left: 20px; 
+    font-size: 90px; 
+    text-align:center; 
+    color:white; 
+    font-family:Georgia, 'Times New Roman', Times, serif; 
+    font-weight: bold;
+}
+
+
+.mainbtn{
+    height: 80px;
+    width: 200px;
+    position:relative;
+    display: inline-block;
+    margin: 40px 0;
+    justify-content: center;
+    align-items: center;
+    color: #c433f4;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    margin-right: 50px;
+    margin-top: 80px;
+}
+
+
+.mainbtn:hover{
+    background: #2a30ea;
+    color: #ffffff;
+    box-shadow: 0 0 5px #c6c9e8,
+                0 0 25px #7b98d7,
+                0 0 50px #2d2aea,
+                0 0 200px #302aea;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, rgba(255, 255, 255, 0.333));
+}
+
+
+/* #################################################################################################################################### */
+/* ####################################################### Footer ##################################################################### */
+
+footer{
+    background-color: #000000;
+    text-align: center;
+    position: fixed;
+    left: 0%;
+    font-size: 18px;
+    padding-top: 3px ;
+    padding-bottom: 3px;
+    bottom: 0px;
+    width: 100%;
+}
+
+
+footer a:link{
+    color: rgb(239, 247, 239);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+
+footer a:hover{
+    background-color: #1c1c1c;
+}
+
+
+/* #################################################################################################################################### */
+/* #################################################### Register & Login Page ######################################################### */
+
+#RegisterPage {
+    position: absolute;
+    overflow: auto;
+    margin-top: 50vh;
+    margin-left: 100vh;
+    width: 450px;
+    height: 80vh;
+    padding: 15px;
+    transform: translate(-50%, -50%);
+    background: rgba(30, 29, 29, 0.838);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: 0 3px 10px #ea2a2a;
+    border: 3px solid white;
+    box-shadow: 
+      1px 5px 4px rgba(0, 0, 0, 0.3), 
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 30px rgb(255, 0, 0);
+}
+  
+
+#RegisterPage h2 {
+    font-size: 30px;
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+  
+
+.user-box {
+    position: relative;
+}
+  
+
+.user-box input {
+    width: 100%;
+    padding: 7px 0;
+    font-size: 15px;
+    color: #fff;
+    margin-bottom: 22px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    
+}
+
+
+.user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+  
+.user-box input:focus ~ label,
+.user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color:#84256e ;
+    font-size: 13px;
+    
+}
+  
+
+.submit {
+    position: relative;
+    display: inline-block;
+    background-color: #000000;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #b02aea;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 0;
+    letter-spacing: 4px
+}
+  
+
+#submit:hover {
+    background: #b02aea;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #2a34ea,
+                0 0 25px #b02aea,
+                0 0 50px #b02aea,
+                0 0 100px #b02aea;
+}
+ 
+
+label.error {
+    color: red;
+    font-size: 10px;
+    display: block;
+    top: 50%;
+}
+
+
+/* ###################################################### */
+
+
+#LoginPage {
+    position: absolute;
+    margin-top: 50vh;
+    margin-left: 100vh;
+    width: 450px;
+    height: 350px;
+    padding: 60px;
+    transform: translate(-50%, -50%);
+    background: rgba(30, 29, 29, 0.838);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: 0 3px 10px #ea2a2a;
+    border: 3px solid white;
+    box-shadow: 
+      1px 5px 4px rgba(0, 0, 0, 0.3), 
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 30px rgb(255, 0, 0);
+
+}
+  
+
+#LoginPage h2 {
+    font-size: 30px;
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* #################################################################################################################################### */
+/* #################################################### About Page #################################################################### */
+
+#aboutDialog{
+    position: absolute;
+    overflow: auto;
+    z-index: 9999;
+    top: 52%;
+    left: 50%;
+    width: 55%;
+    height: 80%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 3px 10px #802aea;
+    border: 3px solid white;
+    box-shadow: 
+      1px 5px 4px rgba(0, 0, 0, 0.3), 
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 30px rgb(187, 0, 255);
+}
+
+
+.modalHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 1px solid #000000;
+    margin-bottom: 5px;
+}
+
+
+.modalText{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#closeAbout {
+    position: absolute;
+    color: #000000;
+    top: 0;
+    right: 0;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+    
+#closeAbout:hover,
+#closeAbout:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* #################################################################################################################################### */
+/* #################################################### Contact Page ################################################################## */
+
+#contactDialog{
+    position: absolute;
+    overflow: auto;
+    z-index: 9999;
+    top: 52%;
+    left: 50%;
+    width: 55%;
+    height: 80%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background: #c2c2c2;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-shadow: 0 3px 10px #2ab7ea;
+    border: 3px solid white;
+    box-shadow: 
+      1px 5px 4px rgba(0, 0, 0, 0.3), 
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 30px rgb(0, 42, 255);
+}
+
+
+#closeContact {
+    position: absolute;
+    color: #000000;
+    top: 0;
+    right: 0;
+    font-size: 70px;
+    font-weight: bold;
+}
+ 
+
+#closeContact:hover,
+#closeContact:focus {
+    color: #ff0000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* #################################################################################################################################### */
+/* #################################################### Settings Page ################################################################# */
+
+#settingsPage{
+    position: absolute;
+    overflow: auto;
+    overflow-x: hidden;
+    margin-top: 50vh;
+    margin-left: 100vh;
+    width: 40%;
+    height:92%;
+    padding: 5px;
+    transform: translate(-50%, -50%);
+    background: rgb(95, 89, 89);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: 0 3px 10px #ea2a2a;
+    border: 3px solid white;
+    box-shadow: 
+      1px 5px 4px rgba(0, 0, 0, 0.3), 
+      0 0 10px rgba(255, 255, 255, 0.6),
+      0 0 30px rgb(255, 0, 0);
+}
+
+
+#settingsPage label {
+    position: relative;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 18px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+#settingsPage input{
+    color: #ddd;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+    width: 70%;
+    height: 60%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 1%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color:white ;
+    border-bottom-width: 2px;
+}
+
+
+#settingsPage input:focus{
+    color: #1c1c1c;
+    background-color: rgb(205, 218, 205);
+}
+
+
+#settingsPage h2 {
+    font-size: 40px;
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+
+#output {
+    font-size: 25px;
+    margin: 0 0 20px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+
+#myShip1 {
+    cursor: pointer;
+    border-radius: 10%;
+    background: red;
+}
+
+
+#myShip2, #myShip3{
+    cursor: pointer;
+    border-radius: 10%;
+    background: #b2b3a1;
+}
+
+
+#myShip1:hover, #myShip2:hover, #myShip3:hover{
+    background: #823ee9 !important;
+}
+
+
+input[type=checkbox] {
+    transform: scale(2);
+}
+
+
+/* #################################################################################################################################### */
+/* #################################################################################################################################### */

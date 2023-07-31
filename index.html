@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/MenuStyle.css" />
+        <link rel="shortcut icon" href="#">
+        <link rel="stylesheet" type="text/css" href="css/gameStyle.css" />
+        <title>Space Invaders Game</title>
+        <link rel="icon" href="resources/images/icon3.png" type="image/png" size="25x25">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    </head>
+
+
+
+    <body>
+        
+        <style>
+            body {
+                background-repeat: no-repeat;
+                margin: 0;
+                background-image: url("resources/images/background1.jpg");
+                background-size: auto;
+            }
+        </style> 
+
+
+        <div id="mySidebar" class="sidebar">
+            <b href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</b>
+            <a href="#WelcomePage" class="btn" onclick="welcomePage()">Home</a>
+            <a href="#RegisterPage" id="registerBtn" class="btn" onclick="registerPage()">Register</a>
+            <a href="#LoginPage" id="loginBtn" class="btn" onclick="loginPage()">Login</a>
+
+            <a href="#About" class="btn" onclick="aboutPage()">About</a>
+            <a href="#ContactUs" class="btn" onclick="contactPage()">Contact Us</a>
+        </div>
+
+
+        <div id="main">
+            <img src="resources/images/logo.jpg" height="70px" style="top: 0; border-radius: 30px; position: fixed;">
+            <button class="openbtn" onclick="openNav()">&#9776;</button>
+
+
+            <div id="WelcomePage" class="page">
+                <h1 id="WelcomeMsg">Welcome to Space Invaders Game!</h1>
+                <center>
+                    <button id="registerBtn" class="mainbtn" onclick="registerPage()">Register</button><br>
+                    <button id="loginBtn" class="mainbtn" onclick="loginPage()">Login</button>
+                </center>
+            </div>
+
+
+
+            <div id="LoginPage" class="page" style="display: none;">
+                <h2>Login</h2>
+                <form id="LForm">
+
+                    <div class="user-box">
+                        <input type="text" id="usernameLogin" name="username" required="">
+                        <label for="usernameLogin">Username</label>
+                    </div>
+
+                    <div class="user-box">
+                        <input type="password" id="passwordLogin" name="password" required="">
+                        <label for="passwordLogin">Password</label>
+                    </div>
+
+                    <button class="submit" type="submit" onclick="loginSubmit()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Login
+                    </button>
+
+                </form>
+            </div>
+
+
+
+            <div id="RegisterPage" class="page" style="display: none;">
+                <h2>Register</h2>
+                <form id="RForm">
+
+                    <div class="user-box">
+                        <input type="text" id="username" name="username" required />
+                        <label for="username">Username</label>
+                    </div>
+
+                    <div class="user-box">
+                        <input type="text" id="email" name="email" required />
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="user-box">
+                        <input type="password" id="password" name="password" required />
+                        <label for="password">Password</label>
+                    </div>
+
+                    <div class="user-box">
+                        <input type="password" id="passwordAuth" name="passwordAuth" required />
+                        <label for="passwordAuth">Confirm Password</label>
+                    </div>
+
+                    <div class="user-box">
+                        <input type="text" id="firstname" name="firstname" required />
+                        <label for="firstname">First Name</label>
+                    </div>
+
+                    <div class="user-box">
+                        <input type="text" id="lastname" name="lastname" required />
+                        <label for="lastname">Last Name</label>
+                    </div>
+
+                    <div class="user-box">
+                        <input type="date" id="birthDate" name="birthDate" required />
+                        <label for="birthDate"></label>
+                    </div>
+
+                    <button class="submit" type="submit" value="Register">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Register
+                    </button>
+
+                </form>
+            </div>
+
+
+
+
+
+            <dialog id="aboutDialog">
+                <span id="closeAbout" onclick="closeModal()">&times;</span>
+
+                <div class="modalHeader">
+                    <span>
+                        <h2>Welcome to Space Invaders Game!</h2>
+                    </span>
+                </div>
+
+                <div class="modalText">
+                    <p>
+                        <b><u>Introduction</u></b><br><br>
+                        Your mission, should you choose to accept it, is to eliminate all the bad spaceships as fast as
+                        possible, and to protect yourself.
+                        Note that you only have 3 lives, make it count.<br>
+                        Good luck.
+
+                        <br><br><br>
+
+                        <b><u>Default Rules</u></b><br>
+                    <ul>
+                        <li>Use the arrow keys to move.</li>
+                        <li>Use the spacebar to shoot</li>
+                        <li>Use the x for right diagnostic shooting.</li>
+                        <li>Use the z for left diagnostic shooting.</li>
+                        <li>Note that there is a timer set to 2 mins, you can modify it through the settings screen.</li>
+                    </ul>
+
+                    <br><br>
+
+                    <b><u>Add-Ons</u></b><br>
+                    <ul>
+                        <li>You can choose which keys you want to play with.</li>
+                        <li>You can choose which spaceship you want to ride on your journey.</li>
+                    </ul>
+
+                    <br><br>
+
+                    <b><u>Plugins</u></b><br>
+                    <ul>
+                        <li>jQuery Validation Plugin.</li>
+                    </ul>
+
+                    </p>
+                </div>
+            </dialog>
+
+
+
+            <dialog id="contactDialog">
+                <span id="closeContact" onclick="closeContactModal()">&times;</span>
+
+                <div class="modalHeader">
+                    <span>
+                        <h2>Welcome to Our Space Game!</h2>
+                    </span>
+                </div>
+
+                <div class="modalText">
+                    <p>
+                        <b><u>Introduction</u></b><br><br>
+                        This game was developed by Eliya Ballout & Muhammad A'utallah
+
+                        <br><br><br>
+
+                        <b><u>For more contact information:</u></b><br>
+                        Contact us at 000-000-0000<br><br>
+                        Or send us a mail:<br><br>
+
+                        <a id="mailTo" style="width: 50% ;float: left;" href="mailto:eliyabal@post.bgu.ac.il">
+                            <i style="font-size:30px;" class="fa">&#xf0e0;</i><br>
+                            eliyabal@post.bgu.ac.il
+                        </a>
+
+                        <a id="mailTo" style="width: 50%;float: right; " href="mailto:odetalla@post.bgu.ac.il">
+                            <i style="font-size:30px" class="fa">&#xf0e0;</i><br>
+                            odetalla@post.bgu.ac.il
+                        </a>
+
+                        <br><br><br>
+
+                    </p>
+                </div>
+            </dialog>
+
+
+
+            <div id="settingsPage" style="display: none;">
+
+                <h2>Settings</h2><br>
+                <table style="margin-left: auto; margin-right: auto;" width="100%">
+                    <tbody>
+                        <tr height="50px">
+                            <td width="50%"><label>Press a key to go UP:</label></td>
+                            <td width="50%"><input class="movmentKey" id="up" type="button" /></td>
+                        </tr>
+
+                        <tr height="50px">
+                            <td width="50%"><label>Press a key to go DOWN:</label></td>
+                            <td width="50%"><input class="movmentKey" id="down" type="button" /></td>
+                        </tr>
+
+                        <tr height="50px">
+                            <td width="50%"><label>Press a key to go RIGHT:</label></td>
+                            <td width="50%"><input class="movmentKey" id="right" type="button" /></td>
+                        </tr>
+
+                        <tr height="50px">
+                            <td width="50%"><label>Press a key to go LEFT:</label></td>
+                            <td width="50%"><input class="movmentKey" id="left" type="button" /></td>
+                        </tr>
+
+                        <tr height="50px">
+                            <td width="50%"><label>Press a key to Shoot:</label></td>
+                            <td width="50%"><input id="shoot" type="button" /></td>
+                        </tr>
+
+                        <tr height="50px">
+                            <td width="50%"><label>Right CrossWise:</label></td>
+                            <td width="50%"><input type="checkbox" id="Rcrosswise" name="Rcrosswise" value="Rcrosswise"></td>
+                        </tr>
+
+                        <tr height="50px">
+                            <td width="50%"><label>Left CrossWise:</label></td>
+                            <td width="50%"><input type="checkbox" id="Lcrosswise" name="Lcrosswise" value="Lcrosswise"></td>
+                        </tr>
+
+                        <tr height="70px">
+                            <td colspan="4"><label>Duration of the game: (sec)</label></td>
+                        </tr>
+
+                        <tr height="30px">
+                            <td colspan="2"><input id="time" min="120" max="300" value="0" type="range"
+                                    style="width: 400px; margin:0 auto;"></td>
+                        </tr>
+
+                        <tr height="30px">
+                            <td colspan="2">
+                                <p id="output">0</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table style="margin-left: auto; margin-right: auto;" width="100%">
+                    <tbody>
+                        <tr height="70px">
+                            <td colspan="4"><label style="font-size: 22px;">Choose your fighter:</label></td>
+                        </tr>
+
+                        <tr height="70px">
+                            <td width=33%><img src="resources/images/myShip1.png" class="choosen" id="myShip1"
+                                    name="myShip1" width="60" height="60"
+                                    onclick="chooseShip('resources/images/myShip1.png')"></td>
+                            <td width=33%><img src="resources/images/myShip2.png" class="choosen" id="myShip2"
+                                    name="myShip2" width="60" height="60"
+                                    onclick="chooseShip('resources/images/myShip2.png')"></td>
+                            <td width=33%><img src="resources/images/myShip3.png" class="choosen" id="myShip3"
+                                    name="myShip3" width="60" height="60"
+                                    onclick="chooseShip('resources/images/myShip3.png')"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br>
+
+                <button class="submit" onclick="gamePage()">Start Game!</button>
+
+            </div>
+
+
+
+            <center>
+                <div id="game" style="display: none;">
+                    <canvas id="gameBoard"></canvas>
+                    <br><br>
+                    <button class="submit" onclick="setupGame()">Play Again!</button>
+                </div>
+            </center>
+
+
+
+            <footer id="footer">
+                <div style="width: 50% ;text-align: center;margin-left: 25%;">
+
+                    <a id="mailTo" style="width: 50% ;float: left;" href="mailto:eliyabal@post.bgu.ac.il">
+                        <i style="font-size:24px" class="fa">&#xf0e0;</i><br>
+                        eliyabal@post.bgu.ac.il
+                    </a>
+
+                    <a id="mailTo" style="width: 50%;float:right;" href="mailto:odetalla@post.bgu.ac.il">
+                        <i style="font-size:24px" class="fa">&#xf0e0;</i><br>
+                        odetalla@post.bgu.ac.il
+                    </a>
+
+                </div>
+            </footer>
+
+        </div>
+
+
+        
+        <script type="module" src="javascript/game/game.js"></script>
+        <script type="text/javascript" src="javascript/menu.js"></script>
+        <script type="text/javascript" src="javascript/registerValidation.js"></script>
+        <script type="text/javascript" src="javascript/logRegCheck.js"></script>
+        <script type="text/javascript" src="javascript/settingsConfig.js"></script>
+
+        <!-- script for the slider of the time in settings page -->
+        <script>
+            const slider = document.getElementById("time");
+            const output = document.getElementById("output");
+            output.innerHTML = slider.value;
+            slider.addEventListener("input", function () {
+                output.innerHTML = this.value;
+            });
+        </script>
+
+
+
+    </body>
+
+</html>
