@@ -1,0 +1,176 @@
+#gameContactScreen {
+  overflow: hidden;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 95%;
+  height: 100%;
+  background-image: url('../resources/images/gameBackground.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#gameInfo {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  color: red;
+  text-align: center;
+  font-size: 30px;
+}
+
+#canvas {
+  position: relative;
+  max-height: 100%;
+  max-width: 100%;
+  z-index: 9999;
+  border: 1px solid rgb(246, 0, 0); 
+  display: block;
+  margin: auto;
+}
+
+table, th, td {
+  position: relative;
+}
+
+#gameInfo h1 {
+  position: absolute;
+  font-size: 30px;
+  margin: 0;
+  bottom: 0;
+  z-index: 2;
+  left: 25%
+}
+
+.gameOptional {
+  display: flex;
+}
+
+.gameBtns {
+  position: absolute;
+  top: 8%;
+  z-index: 9999;
+  cursor: pointer;
+  width: 200px; 
+  height: 50px; 
+  display: inline-block;
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: #b02aea;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .5s;
+  margin-top: 0;
+}
+
+.gameBtns:hover {
+  background: #b02aea;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #2a34ea,
+              0 0 25px #b02aea,
+              0 0 50px #b02aea,
+              0 0 100px #b02aea;
+}
+
+#startGame {
+  left: 65%;
+}
+
+#pauseGame {
+  left: 25%;
+}
+
+#resumeGame {
+  left: 25%;
+  display: none;
+}
+
+#muteGame {
+  left: 45%;
+}
+
+#unmuteGame {
+  left: 45%;
+  display: none;
+}
+
+
+/* #################################################################################################################################### */
+/* #################################################### gameOver Dialog ############################################################### */
+
+#gameOverDialog{
+  position: absolute;
+  display: none;
+  z-index: 8888;
+  top: 50%;
+  left: 50%;
+  width: 45%;
+  height:80%;
+  padding: 5px;
+  transform: translate(-50%, -50%);
+  background: rgb(95, 89, 89);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  text-shadow: 0 3px 10px #ea2a2a;
+  border: 3px solid white;
+  box-shadow: 
+    1px 5px 4px rgba(0, 0, 0, 0.3), 
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 30px rgb(255, 0, 0);
+}
+
+#endGameText {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 0 20px;
+  padding: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.DBtns{
+  position: absolute;
+  bottom: 2.5%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialogBtns {
+  cursor: pointer;
+  width: 140px; 
+  height: 40px; 
+  display: inline-block;
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 30px;
+  color: #b02aea;
+  font-size: 17px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .5s;
+  margin-top: 0;
+}
+
+.dialogBtns:hover {
+  background: #b02aea;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #2a34ea,
+              0 0 25px #b02aea,
+              0 0 50px #b02aea,
+              0 0 100px #b02aea;
+}

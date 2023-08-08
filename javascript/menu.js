@@ -23,11 +23,16 @@ function welcomePage(){
   $("#aboutPage").hide();
   $("#contactPage").hide();
   $("#settingsPage").hide();
+  $("#gameContactScreen").hide();
+  $("#gameOverDialog").hide();
   $("#footer").show();
   clearLogPage();
   clearRegPage();
   closeNav();
 
+  if (gameOn){
+    exitGame();
+  }
 }
 
 function registerPage(){
@@ -39,8 +44,14 @@ function registerPage(){
   $("#aboutPage").hide();
   $("#contactPage").hide();
   $("#settingsPage").hide();
+  $("#gameContactScreen").hide();
+  $("#gameOverDialog").hide();
   $("#footer").hide();
   closeNav();
+  
+  if (gameOn){
+    exitGame();
+  }
 }
 
 
@@ -53,8 +64,14 @@ function loginPage(){
   $("#aboutPage").hide();
   $("#contactPage").hide();
   $("#settingsPage").hide();
+  $("#gameContactScreen").hide();
+  $("#gameOverDialog").hide();
   $("#footer").hide();
   closeNav();
+  
+  if (gameOn){
+    exitGame();
+  }
 }
 
 
@@ -126,7 +143,7 @@ function closeContactModalOnClickOutside() {
     let dialog = $("#contactDialog");
     let target = $(e.target);
     if (!target.is(dialog) && !dialog.has(target).length) {
-        dialog.hide();
+      dialog.hide();
     }
   });
 }
@@ -143,7 +160,51 @@ function goToSettingsPage(){
   $("#aboutPage").hide();
   $("#contactPage").hide();
   $("#settingsPage").show();
+  $("#gameContactScreen").hide();
+  $("#gameOverDialog").hide();
   clearLogPage();
   clearRegPage();
 }
 
+
+function startGame(){
+  $("#WelcomePage").hide();
+  $("#RegisterPage").hide();
+  $("#LoginPage").hide();
+  $("#aboutPage").hide();
+  $("#contactPage").hide();
+  $("#settingsPage").hide();
+  $("#gameContactScreen").show();
+  $("#startGame").show();
+  $("#pauseGame").show();
+  $("#resumeGame").show();
+  $("#gameOverDialog").hide();
+  clearLogPage();
+  clearRegPage();
+
+  event.preventDefault();
+
+  restartGame();
+  newGameDuringGame();
+
+}
+
+
+function goToGameOverDialog(){
+  $("#gameOverDialog").show();
+  $("#startGame").hide();
+  $("#pauseGame").hide();
+  $("#resumeGame").hide();
+  $("#muteGame").hide();
+  $("#unmuteGame").hide();
+  $("#volumeFader").hide();
+}
+
+
+function gameOverDialogToNewGameDisplay(){
+  $("#gameOverDialog").hide();
+  $("#startGame").show();
+  $("#pauseGame").show();
+  $("#resumeGame").show();
+  $("#muteGame").show();
+}

@@ -3,6 +3,7 @@
 
     <head>
         <link rel="stylesheet" type="text/css" href="/css/MenuStyle.css"/>
+        <link rel="stylesheet" type="text/css" href="/css/gameScreen.css"/>
         <title>Space Invaders Game</title>
         <link rel="icon" href="/resources/images/icon3.png" type="image/png" size="25x25">
         <meta charset="UTF-8">
@@ -141,7 +142,7 @@
                         Good luck.
     
                         <br><br><br>
-    
+                        
                         <b><u>Default Rules</u></b><br>
                         <ul>
                             <li>Use the arrow keys to move.</li>
@@ -150,20 +151,14 @@
                         </ul>
     
                         <br><br>
-    
+                        <!-- TODO add info about crosswise and mouse option-->
                         <b><u>Add-Ons</u></b><br>
                         <ul>
                             <li>You can choose which keys you want to play with.</li>
                             <li>You can choose which spaceship you want to ride on your journey.</li>
+                            <li>You can combine the game in diagonal movements for all the spaceShips, and even you can shoot diagonally by pressing <b>'x' for right shooting, and 'z' for left shooting.</b></li>
+                            <li>In addition, you can enable the mouse option in the settings page, and enjoy playing and moving with the mouse, <b>with pressing the left button in the mouse to shoot.</b></li>
                         </ul>
-
-                        <br><br>
-
-                        <b><u>Plugins</u></b><br>
-                        <ul>
-                            <li>jQuery Validation Plugin.</li>
-                        </ul>
-    
                     </p>
                 </div>
             </dialog>
@@ -235,6 +230,16 @@
                             <td width="50%"><label>Press a key to Shoot:</label></td>
                             <td width="50%"><input id="shoot" type="button"/></td>
                         </tr>
+
+                        <tr height="50px">
+                            <td width="50%"><label>CrossWise:</label></td>
+                            <td width="50%"><input type="checkbox" id="crosswise" name="crosswise" value="crosswise"></td>
+                        </tr>
+
+                        <tr height="50px">
+                            <td width="50%"><label>Mouse Option:</label></td>
+                            <td width="50%"><input type="checkbox" id="mouseGame" name="mouseGame" value="mouseGame"></td>
+                        </tr>
     
                         <tr height="70px">
                             <td colspan="4"><label>Duration of the game: (sec)</label></td>
@@ -266,10 +271,70 @@
      
                 <br><br>
             
-                <button id="submit" onclick="start()">Start Game!</button>
+                <button id="submit" onclick="startGame()">Start Game!</button>
             
             </div>
+
+
+
+            <div id="gameContactScreen">
+                <table id="gameInfo">
+                    <tr height="8%">
+                        <td>
+                            <h1 class="gameInfo">Score: <span id="scoreGame"></span></h1>
+                        </td>
+
+                        <td>
+                            <h1 class="gameInfo">Lives           
+                                <img id="heart1" src="resources/images/livesHeart.png" alt="heart" width="30" height="25">
+                                <img id="heart2" src="resources/images/livesHeart.png" alt="heart" width="30" height="25">
+                                <img id="heart3" src="resources/images/livesHeart.png" alt="heart" width="30" height="25">
+                            </h1>
+                        </td>
+
+                        <td>
+                            <h1 class="gameInfo">Time remaining: <span id="timeGame"></span></h1>
+                        </td>
+                    </tr>
+
+                    <tr height="70%">
+                        <td colspan="6">                  
+                            <canvas id="canvas" onmousemove=moveParams() onmousedown=pressMouse()></canvas>
+                        </td>
+                    </tr>
+
+                    <tr height="10%">
+                        <td colspan="6">
+                            <div class="gameOptional">
+                                <button class="gameBtns" id="startGame" onclick="newGameDuringGame()">Start New Game</button>
+                                <button class="gameBtns" id="pauseGame" onclick="pauseGame()">Pause Game</button>
+                                <button class="gameBtns" id="resumeGame" onclick="resumeGame()">Resume Game</button>
+                                <button class="gameBtns" id="muteGame" onclick="muteGame()">Mute</button>
+                                <button class="gameBtns" id="unmuteGame" onclick="unMuteGame()">Unmute</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
     
+
+
+            <dialog id="gameOverDialog" style="display: none;">
+                <div class="modal-header">
+                    <span id=endGameText></span>
+                </div>
+    
+                <div class="gameOverCanvas">
+                    <canvas id="canvas2" width="500" height="450"></canvas>
+                </div>
+
+                <div class="DBtns">
+                    <button class="dialogBtns" id="NewGameGameOverDialog"><b>New game</b></button>
+                    <button class="dialogBtns" id="SettingsGameOverDialog"><b>Settings</b></button>
+                </div>
+            </dialog>
+    
+
     
             <footer id="footer">
                 <div style="width: 50% ;text-align: center;margin-left: 25%;">
@@ -290,11 +355,6 @@
                 </div>
             </footer>
 
-
-
-            <!-- //TODO complete the game from here -->
-
-
         </div>
 
 
@@ -306,12 +366,17 @@
 
 
 
-        <script type="text/javascript" src="/javascript/game/game.js"></script>
         <script type="text/javascript" src="/javascript/menu.js"></script>
         <script type="text/javascript" src="/javascript/registerValidation.js"></script>
         <script type="text/javascript" src="/javascript/logRegCheck.js"></script>
         <script type="text/javascript" src="/javascript/settingsConfig.js"></script>
-        <script type="text/javascript" src="/javascript/game/playerShip.js"></script>
+
+        <script type="text/javascript" src="javascript/game/game.js"></script>
+        <script type="text/javascript" src="javascript/game/playerShip.js"></script>
+        <script type="text/javascript" src="javascript/game/enemyShip.js"></script>
+        <script type="text/javascript" src="javascript/game/fire.js"></script>
+        <script type="text/javascript" src="javascript/game/gameSound.js"></script>
+        <script type="text/javascript" src="javascript/game/gamePolicy.js"></script>
 
         <!-- script for the slider of the time in settings page -->
         <script>
