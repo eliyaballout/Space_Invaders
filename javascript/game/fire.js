@@ -60,17 +60,17 @@ function createEnemyFire(){
 }
 
 
-function moveFiers(){ 
-    moveFiersArray(playerFiresLeft, -0.5, -1, 1)
-    moveFiersArray(playerFires, 0, -1, 1)
-    moveFiersArray(playerFiresRight, 0.5, -1, 1)
-    moveFiersArray(enemyFiresLeft, -1, 1, getsSEnemypeedMultiplier())
-    moveFiersArray(enemyFires, 0, 1, getsSEnemypeedMultiplier())
-    moveFiersArray(enemyFiresRight, 1, 1, getsSEnemypeedMultiplier())
+function moveFire(){ 
+    moveFireArray(playerFiresLeft, -0.5, -1, 1)
+    moveFireArray(playerFires, 0, -1, 1)
+    moveFireArray(playerFiresRight, 0.5, -1, 1)
+    moveFireArray(enemyFiresLeft, -1, 1, getsSEnemypeedMultiplier())
+    moveFireArray(enemyFires, 0, 1, getsSEnemypeedMultiplier())
+    moveFireArray(enemyFiresRight, 1, 1, getsSEnemypeedMultiplier())
 }
 
 
-function moveFiersArray(firesArray, deltaX, deltaY, speedMultiplier){
+function moveFireArray(firesArray, deltaX, deltaY, speedMultiplier){
     for (var i = 0; i < firesArray.length; i++) {
         firesArray[i].y += deltaY * speedMultiplier;
         firesArray[i].x += deltaX;
@@ -101,20 +101,20 @@ function existsEnemyFireAtTopScrrenHelper(enemyFiresArray){
 }
 
 
-function drawFires(){ 
+function drawFire(){ 
     // Player
-    drawFiresHelper(playerFiresLeft, playerFireImage, 30, 30, -15, 0)
-    drawFiresHelper(playerFires, playerFireImage, 30, 30, -15, 0)
-    drawFiresHelper(playerFiresRight, playerFireImage, 30, 30, -15, 0)
+    drawFireHelper(playerFiresLeft, playerFireImage, 30, 30, -15, 0)
+    drawFireHelper(playerFires, playerFireImage, 30, 30, -15, 0)
+    drawFireHelper(playerFiresRight, playerFireImage, 30, 30, -15, 0)
     
     // Enemy
-    drawFiresHelper(enemyFiresLeft, enemyFireImage,  enemyFireSize["x"],  enemyFireSize["y"], 0, 0) 
-    drawFiresHelper(enemyFires, enemyFireImage,  enemyFireSize["x"], enemyFireSize["y"], 0, 0)
-    drawFiresHelper(enemyFiresRight, enemyFireImage,  enemyFireSize["x"], enemyFireSize["y"], 0, 0)
+    drawFireHelper(enemyFiresLeft, enemyFireImage,  enemyFireSize["x"],  enemyFireSize["y"], 0, 0) 
+    drawFireHelper(enemyFires, enemyFireImage,  enemyFireSize["x"], enemyFireSize["y"], 0, 0)
+    drawFireHelper(enemyFiresRight, enemyFireImage,  enemyFireSize["x"], enemyFireSize["y"], 0, 0)
 }
 
 
-function drawFiresHelper(firesArray, image, width, height, offsetX, offsetY){
+function drawFireHelper(firesArray, image, width, height, offsetX, offsetY){
     for (var i = 0; i < firesArray.length; i++) {
         ctx.drawImage(image, firesArray[i].x + offsetX, firesArray[i].y + offsetY, width, height);
     }

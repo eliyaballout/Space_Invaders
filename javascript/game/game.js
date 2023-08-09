@@ -88,9 +88,9 @@ function initialGame(){
 
 function setup(){
   lifeLeft = 3;
-  document.getElementById('heart1').style.visibility='visible';
-  document.getElementById('heart2').style.visibility='visible';
-  document.getElementById('heart3').style.visibility='visible';
+  document.getElementById('heart1').style.visibility = 'visible';
+  document.getElementById('heart2').style.visibility = 'visible';
+  document.getElementById('heart3').style.visibility = 'visible';
 
   timeLeft = durationGame;
 
@@ -127,8 +127,8 @@ function loop(){
 
   drawPlayerShips();
   updatePlayerPosition();
-  drawFires();
-  moveFiers();
+  drawFire();
+  moveFire();
 
   drawEnemyShips();
   moveEnemyShips();
@@ -159,6 +159,8 @@ function newGameDuringGame(){
   $("#startGame").show();
   $("#pauseGame").show();
   $("#resumeGame").hide();
+  $("#muteGame").show();
+  $("#unmuteGame").hide();
   restartGame();
 }
 
