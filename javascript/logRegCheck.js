@@ -21,7 +21,8 @@ function isValidUser(user, pass) {
 
 
 function loginSubmit(){
-    let $inputs = $('#LForm input');
+    event.preventDefault();
+    let $inputs = $('#LForm :input');
     let info = {};
     $inputs.each(function() {
         info[this.name] = $(this).val();
@@ -32,7 +33,7 @@ function loginSubmit(){
     }
 
     else {
-        alert("Invalid username or password");
+        alert("Invalid username or password!");
         clearLogPage();
         loginPage();
     }
