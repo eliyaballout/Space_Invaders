@@ -1,5 +1,5 @@
 const allUsers = [];
-allUsers.push({username: "p", email: "test@gmail.com", password: "testuser", firstname: "Tester", lastname: "Tester", birthDate: "04/23/2023"})
+allUsers.push({username: "admin", email: "admin@gmail.com", password: "admin123", firstname: "admin", lastname: "admin", birthDate: "04/23/2023"})
 
 
 
@@ -49,4 +49,3 @@ function clearRegPage(){
     document.getElementById('RForm').reset();
     $('label[id*="error"]').text('');
 }
-

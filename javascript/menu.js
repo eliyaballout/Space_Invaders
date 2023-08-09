@@ -23,7 +23,7 @@ function welcomePage(){
   $("#aboutPage").hide();
   $("#contactPage").hide();
   $("#settingsPage").hide();
-  $("#gameContactScreen").hide();
+  $("#gamePage").hide();
   $("#gameOverDialog").hide();
   $("#footer").show();
   clearLogPage();
@@ -44,7 +44,7 @@ function registerPage(){
   $("#aboutPage").hide();
   $("#contactPage").hide();
   $("#settingsPage").hide();
-  $("#gameContactScreen").hide();
+  $("#gamePage").hide();
   $("#gameOverDialog").hide();
   $("#footer").hide();
   closeNav();
@@ -64,7 +64,7 @@ function loginPage(){
   $("#aboutPage").hide();
   $("#contactPage").hide();
   $("#settingsPage").hide();
-  $("#gameContactScreen").hide();
+  $("#gamePage").hide();
   $("#gameOverDialog").hide();
   $("#footer").hide();
   closeNav();
@@ -171,7 +171,7 @@ function goToSettingsPage(){
   $("#aboutPage").hide();
   $("#contactPage").hide();
   $("#settingsPage").show();
-  $("#gameContactScreen").hide();
+  $("#gamePage").hide();
   $("#gameOverDialog").hide();
   clearLogPage();
   clearRegPage();
@@ -189,7 +189,7 @@ function startGame(){
   $("#aboutPage").hide();
   $("#contactPage").hide();
   $("#settingsPage").hide();
-  $("#gameContactScreen").show();
+  $("#gamePage").show();
   $("#startGame").show();
   $("#pauseGame").show();
   $("#resumeGame").show();

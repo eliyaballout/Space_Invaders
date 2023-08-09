@@ -102,6 +102,3 @@ function submitRegister(){
     loginPage();
     clearRegPage();
 }
-
-
-
