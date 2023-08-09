@@ -75,10 +75,13 @@ function loginPage(){
 }
 
 
-
 function aboutPage(){
   openModal();
   closeNav();
+
+  if (gameOn){
+    pauseGame();
+  }
 }
 
 
@@ -92,6 +95,10 @@ function openModal(){
 
 function closeModal(){
   $("#aboutDialog").hide();
+  if (gameOn){
+    resumeGame();
+  }
+
   document.removeEventListener("keydown", closeModalOnEscape);
   document.removeEventListener("click", closeModalOnClickOutside);
 }
@@ -101,6 +108,10 @@ function closeModal(){
 function contactPage(){
   openContactModal();
   closeNav();
+
+  if (gameOn){
+    pauseGame();
+  }
 }
 
 
@@ -167,6 +178,10 @@ function goToSettingsPage(){
 }
 
 
+/* #################################################################################################################################### */
+/* #################################################################################################################################### */
+
+
 function startGame(){
   $("#WelcomePage").hide();
   $("#RegisterPage").hide();
@@ -208,3 +223,7 @@ function gameOverDialogToNewGameDisplay(){
   $("#resumeGame").show();
   $("#muteGame").show();
 }
+
+
+/* #################################################################################################################################### */
+/* #################################################################################################################################### */

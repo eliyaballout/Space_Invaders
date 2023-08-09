@@ -9,8 +9,6 @@ $(document).ready(function(){
     $("#left").val(allKeyPressed["left"]);
     $("#shoot").val("spaceBar");
     $("#time").change(function(event) { updateGameTime(event); });
-    document.getElementById('crosswise').checked = false; // Uncheck
-    document.getElementById('mouseGame').checked = false; // Uncheck
 
    
 

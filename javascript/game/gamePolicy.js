@@ -19,8 +19,8 @@ function checkGameOver(){
 
 
 function gameOver(){
-  LastGameRecorde = [playerScore, durationGame - timeLeft, new Date().toLocaleString()];
-  recordsData.push(LastGameRecorde);
+  LastGameRecord = [playerScore, durationGame - timeLeft, new Date().toLocaleString()];
+  recordsData.push(LastGameRecord);
   pauseGame();
   displayScore(); 
   if (lifeLeft <= 0){
@@ -48,15 +48,15 @@ function gameOver(){
 function reduceLife(){
   switch (lifeLeft) { 
     case 3:
-      document.getElementById('heart3').style.visibility='hidden';
+      document.getElementById('heart3').style.visibility = 'hidden';
       break;
 
     case 2:
-      document.getElementById('heart2').style.visibility='hidden';
+      document.getElementById('heart2').style.visibility = 'hidden';
       break;
 
     case 1:
-      document.getElementById('heart1').style.visibility='hidden';
+      document.getElementById('heart1').style.visibility = 'hidden';
       break;
   } 
 
@@ -72,7 +72,7 @@ function updateScore(addedScore) {
 
 
 function displayScore(){
-    printLestGame = 0; 
+    printLastGame = 0; 
     maxRecordsToShow = 20;
     canvas2 = document.getElementById("canvas2");
   	ctx2 = canvas2.getContext("2d");
@@ -87,12 +87,12 @@ function displayScore(){
 
     for (let i = 0; i < sortedRecordsData.length; i++) {
       ctx2.fillStyle = "white";
-      if(sortedRecordsData[i] === LastGameRecorde || (i === maxRecordsToShow && printLestGame === 0)){ //print last game
-        printLestGame = 1;
+      if(sortedRecordsData[i] === LastGameRecord || (i === maxRecordsToShow && printLastGame === 0)){ //print last game
+        printLastGame = 1;
         ctx2.fillStyle = "#20dea2";
-        let place = getPlaceRecord(sortedRecordsData, LastGameRecorde);
-        let score = LastGameRecorde[0];
-        let date = LastGameRecorde[2];
+        let place = getPlaceRecord(sortedRecordsData, LastGameRecord);
+        let score = LastGameRecord[0];
+        let date = LastGameRecord[2];
         ctx2.fillText(place, 10, 110 + i * 30);      
         ctx2.fillText(score, 120, 110 + i * 30);
         ctx2.fillText(date, 230, 110 + i * 30);
@@ -110,9 +110,9 @@ function displayScore(){
 }
 
 
-function getPlaceRecord(sortedRecordsData,LastGameRecorde){
+function getPlaceRecord(sortedRecordsData, LastGameRecord){
   for (let i = 0; i < sortedRecordsData.length; i++) {
-    if(sortedRecordsData[i] === LastGameRecorde){
+    if(sortedRecordsData[i] === LastGameRecord){
       return i + 1;
     }
   }

@@ -4,6 +4,7 @@ playerPosition = {x: 300, y: 400}
 playerShipSize = {x: 50, y: 50}
 
 
+
 function chooseShip(selectedShip){
     switch (selectedShip) {
         case "/resources/images/myShip1.png":
@@ -40,6 +41,7 @@ function setupPlyer(){
     playerStarShip.src = myShip;
     
 }
+
 
 function drawPlayerShips(){ 
     ctx.drawImage(playerStarShip, playerPosition.x, playerPosition.y, playerShipSize["x"], playerShipSize["y"]);

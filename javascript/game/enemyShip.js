@@ -6,8 +6,10 @@ enemyStartShip2 = new Image();
 enemyStartShip3 = new Image();
 enemyStartShip4 = new Image();
 activeEnemyShip = 20;
-enemyShipSize ={x: 50, y: 50}
+enemyShipSize = {x: 50, y: 50}
 crosswise = false; // move the enemyShip crosswise
+
+
 
 function setupEnemyShips(){
     enemyStartShip.src = "resources/images/enemyShip1.png";
@@ -47,7 +49,6 @@ function getsSEnemypeedMultiplier(){
 let t = 0; // Initialize time variable
 
 function moveEnemyShips() {
-
     if(document.getElementById('crosswise').checked){
         t += (getsSEnemypeedMultiplier() * 0.002); // Increment time
 
@@ -55,7 +56,7 @@ function moveEnemyShips() {
         let x = (canvas.width - (enemyShipSize["x"] * 5)) / 2 + Math.sin(t) * ((canvas.width - (enemyShipSize["x"] * 5)) / 2 - enemyShipSize["x"]);
         let y = canvas.height * 0.2 + Math.cos(t) * canvas.height * 0.1 - 25;
     
-        if(enemyPosition.x > canvas.width-(enemyShipSize["x"]*5) || enemyPosition.x < 0){
+        if(enemyPosition.x > canvas.width - (enemyShipSize["x"] * 5) || enemyPosition.x < 0){
             direction *= -1;
         }    
     
@@ -65,7 +66,7 @@ function moveEnemyShips() {
     }
 
     else {
-        enemyPosition.x += (getsSEnemypeedMultiplier()*0.4)*direction;
+        enemyPosition.x += (getsSEnemypeedMultiplier() * 0.4) * direction;
         if(enemyPosition.x > canvas.width - (enemyShipSize["x"] * 5) || enemyPosition.x < 0){
             direction *= -1;
         }   

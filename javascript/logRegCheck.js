@@ -23,7 +23,6 @@ function isValidUser(user, pass) {
 function loginSubmit(){
     let $inputs = $('#LForm input');
     let info = {};
-    console.log($inputs);
     $inputs.each(function() {
         info[this.name] = $(this).val();
     });

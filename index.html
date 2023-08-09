@@ -50,23 +50,23 @@
                 <h2>Login</h2>
                 <form id="LForm">
     
-                <div class="user-box">
-                    <input type="text"  id="usernameLogin" name="username" required="">
-                    <label for="usernameLogin">Username</label>
-                </div>
-    
-                <div class="user-box">
-                    <input type="password" id="passwordLogin" name="password" required="">
-                    <label for="passwordLogin">Password</label>
-                </div>
-    
-                <button id="submit" type="submit" onclick="loginSubmit()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Login
-                </button>
+                    <div class="user-box">
+                        <input type="text" id="usernameLogin" name="username" required/>
+                        <label for="username">Username</label>
+                    </div>
+        
+                    <div class="user-box">
+                        <input type="password" id="passwordLogin" name="password" required/>
+                        <label for="password">Password</label>
+                    </div>
+        
+                    <button class="menuBtns" type="submit" onclick="loginSubmit()">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Login
+                    </button>
     
                 </form>
             </div>
@@ -112,7 +112,7 @@
                         <label for="birthDate"></label>
                     </div>
     
-                    <button id="submit" type="submit" value="Register">
+                    <button class="menuBtns" type="submit" value="Register">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -151,7 +151,7 @@
                         </ul>
     
                         <br><br>
-                        <!-- TODO add info about crosswise and mouse option-->
+
                         <b><u>Add-Ons</u></b><br>
                         <ul>
                             <li>You can choose which keys you want to play with.</li>
@@ -271,7 +271,7 @@
      
                 <br><br>
             
-                <button id="submit" onclick="startGame()">Start Game!</button>
+                <button class="menuBtns" onclick="startGame()">Start Game!</button>
             
             </div>
 

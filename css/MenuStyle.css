@@ -253,7 +253,7 @@ footer a:hover{
 }
   
 
-#submit {
+.menuBtns {
     position: relative;
     display: inline-block;
     background-color: #000000;
@@ -271,7 +271,7 @@ footer a:hover{
 }
   
 
-#submit:hover {
+.menuBtns:hover {
     background: #b02aea;
     color: #fff;
     border-radius: 5px;

@@ -8,7 +8,7 @@ lifeLeft = 3;
 durationGame = document.getElementById("time").value;
 timeLeft = durationGame;
 recordsData = [];//[[score, time, date]..]
-LastGameRecorde = [];//[score, time, date]
+LastGameRecord = [];//[score, time, date]
 let keys = {}; // Object to keep track of which keys are currently being pressed
 let gameOn = false;
 
@@ -113,9 +113,9 @@ function startGameLoop(){
 
 
 function restartGame(){
-  document.getElementById('heart1').style.visibility='visible';
-  document.getElementById('heart2').style.visibility='visible';
-  document.getElementById('heart3').style.visibility='visible';
+  document.getElementById('heart1').style.visibility = 'visible';
+  document.getElementById('heart2').style.visibility = 'visible';
+  document.getElementById('heart3').style.visibility = 'visible';
   initialGame()
   setup()
   startGameLoop()
