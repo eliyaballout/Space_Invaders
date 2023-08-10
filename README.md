@@ -18,7 +18,7 @@ Good Luck! ...
 ## Click and Play
 
 ### Playing online (easiest way)
-1. Just [click here]() and enjoy the game! <br><br>
+1. Just [click here](https://eliyaballout.github.io/Space_Invaders) and enjoy the game! <br><br>
 
 
 ### Downloading and playing locally on your computer:
@@ -65,3 +65,12 @@ The currently supported functionalities are:
 
 ## Some screenshots from our website
 
+![homePage](https://github.com/eliyaballout/Space_Invaders/assets/94072460/c07b89fe-45c1-4a94-a2d2-039c1135c95b) <br><br>
+
+![sidebar](https://github.com/eliyaballout/Space_Invaders/assets/94072460/289e958d-43ae-4420-af68-6f7837eea5e0) <br><br>
+
+![login](https://github.com/eliyaballout/Space_Invaders/assets/94072460/90284058-3c3d-42ba-90fd-241532050acd) <br><br>
+
+![settingsPage](https://github.com/eliyaballout/Space_Invaders/assets/94072460/aef98e6d-70ef-401d-adc1-2d9e2a4280b5) <br><br>
+
+![gamePage](https://github.com/eliyaballout/Space_Invaders/assets/94072460/e4733227-208a-471d-ab1d-0f38f37f0224) <br>
