@@ -63,7 +63,7 @@ The currently supported functionalities are:
 
 
 
-## Some screenshots from our website
+## Some screenshots from our game
 
 ![homePage](https://github.com/eliyaballout/Space_Invaders/assets/94072460/c07b89fe-45c1-4a94-a2d2-039c1135c95b) <br><br>
 
