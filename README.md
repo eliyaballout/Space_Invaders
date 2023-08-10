@@ -25,7 +25,7 @@ Good Luck! ...
 1. Download and extract [the ZIP file](https://github.com/eliyaballout/Space_Invaders/archive/refs/heads/main.zip).
 2. Just double click the `index.html` file and open it with chrome or firefox, and you are ready to go.<br><br>
    
-<u>***Important Note:***</u> In order to play the game you have to do a **registeration** through the Register page, and then you can login with your username and passsword and enjoy the game!.<br>
+<u>***Important Note:***</u> In order to play the game you have to do a **registeration** through the Register page, and then you can login with your username and passsword and enjoy the game!.<br><br>
 If you are lazy to do the registeration, feel free to login with this account:<br>
 ```
 username: admin
